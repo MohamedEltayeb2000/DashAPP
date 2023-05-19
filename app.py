@@ -322,7 +322,7 @@ regions = {
 
 # app_name = "Dash Earthquakes"
 # server = Flask(app_name)
-server.secret_key = os.environ.get("SECRET_KEY", "default-secret-key")
+# server.secret_key = os.environ.get("SECRET_KEY", "default-secret-key")
 # app = dash.Dash(name=app_name, server=server)
 app = JupyterDash()
 

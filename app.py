@@ -320,11 +320,11 @@ regions = {
     "oceania": {"lat": -10, "lon": 130, "zoom": 2},
 }
 
-app_name = "Dash Earthquakes"
-server = Flask(app_name)
+# app_name = "Dash Earthquakes"
+# server = Flask(app_name)
 server.secret_key = os.environ.get("SECRET_KEY", "default-secret-key")
 # app = dash.Dash(name=app_name, server=server)
-app = JupyterDash(name=app_name, server=server)
+app = JupyterDash()
 
 app.layout = html.Div(
     children=[

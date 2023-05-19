@@ -13,7 +13,7 @@ from dash.dependencies import Input, Output
 # from dotenv import load_dotenv
 from flask import Flask, json
 
-# DEBUG = True if os.environ.get("DEBUG") else False
+DEBUG = True if os.environ.get("DEBUG") else False
 # dotenv_path = os.path.join(os.path.dirname(__file__), ".env")
 # load_dotenv(dotenv_path)
 
@@ -321,10 +321,10 @@ regions = {
 }
 
 app_name = "Dash Earthquakes"
-# server = Flask(app_name)
-# server.secret_key = os.environ.get("SECRET_KEY", "default-secret-key")
-# app = dash.Dash(name=app_name, server=server)
-app = JupyterDash()
+server = Flask(app_name)
+server.secret_key = os.environ.get("SECRET_KEY", "default-secret-key")
+app = dash.Dash(name=app_name, server=server)
+# app = JupyterDash()
 
 app.layout = html.Div(
     children=[
@@ -412,7 +412,7 @@ def _update_graph(map_style, region):
     return figure
 
 
-# if __name__ == "__main__":
-#     port = int(os.environ.get("PORT", 5000))
-#     app.run_server(debug=DEBUG, port=port, threaded=True)
-app.run_server(port = 8000)
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run_server(debug=DEBUG, port=port, threaded=True)
+# app.run_server(port = 8000)

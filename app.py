@@ -13,7 +13,7 @@ from dash.dependencies import Input, Output
 # from dotenv import load_dotenv
 from flask import Flask, json
 
-DEBUG = True if os.environ.get("DEBUG") else False
+# DEBUG = True if os.environ.get("DEBUG") else False
 # dotenv_path = os.path.join(os.path.dirname(__file__), ".env")
 # load_dotenv(dotenv_path)
 

@@ -413,6 +413,7 @@ def _update_graph(map_style, region):
 
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))
-    app.run_server(debug=True, port=port, threaded=True)
+#     port = int(os.environ.get("PORT", 5000))
+#     app.run_server(debug=True, port=port, threaded=True)
+server.run(debug=True)
 # app.run_server(port = 8000)
